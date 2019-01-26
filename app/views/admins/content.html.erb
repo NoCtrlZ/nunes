@@ -1,1 +1,9 @@
-content
+<%= form_for @article,:url => {:action => :create} do |f| %>
+    <p>タイトル</p>
+    <%= f.text_field :title %>
+    <p>目次</p>
+    <%= f.text_field :topic %>
+    <p>本文</p>
+    <%= f.text_field :text %>
+    <%= f.submit %>
+<% end %>

@@ -15,12 +15,9 @@ class AdminsController < ApplicationController
 	end
 
 	def create
-		@article = Article.new
-		if @article.save
-      redirect_to admin_path
-    else
-      render :new
-    end
+		@article = Article.new({title: params[:article][:title], topic: params[:article][:topic], text: params[:article][:text]})
+		@article.save
+		redirect_to admin_path
 	end
 
 end
