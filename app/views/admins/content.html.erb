@@ -1,9 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nunes</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
+</head>
+<body>
 <%= form_for @article,:url => {:action => :create} do |f| %>
     <p>タイトル</p>
     <%= f.text_field :title %>
     <p>目次</p>
     <%= f.text_field :topic %>
     <p>本文</p>
-    <%= f.text_field :text %>
+    <div id="editor">
+    <textarea name="article[text]" id="markdown" class="textarea col-md-6 form-control" style="resize: none;" rows="20" v-model='input' debounce='50'></textarea>
+    <div v-html="input | marked"></div>
+    </div>
+
+    <script>
+    window.onload = function() {
+  new Vue({
+    el: '#editor',
+    data: {
+      input: '<%== j @article.text %>',
+    },
+    filters: {
+      marked: marked,
+    },
+  });
+};
+</script>
     <%= f.submit %>
 <% end %>
+</body>
