@@ -9,12 +9,8 @@ class AdminsController < ApplicationController
 		render :layout => nil
 	end
 
-	def topic
-		@article = Article.new
-		render :layout => nil
-	end
-
 	def content
+		@article = Article.new
 		render :layout => nil
 	end
 
