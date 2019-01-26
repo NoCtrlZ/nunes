@@ -10,11 +10,21 @@ class AdminsController < ApplicationController
 	end
 
 	def topic
+		@article = Article.new
 		render :layout => nil
 	end
 
 	def content
 		render :layout => nil
+	end
+
+	def create
+		@article = Article.new
+		if @article.save
+      redirect_to admin_path
+    else
+      render :new
+    end
 	end
 
 end
