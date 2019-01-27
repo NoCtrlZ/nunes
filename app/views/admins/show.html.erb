@@ -1,3 +1,7 @@
-hello world j
+<h1>This is admin Top page</h1>
 <%= link_to 'new', new_admin_path %>
 <%= link_to 'content', controller: :admins, action: :content %>
+
+<% @article.each do |article| %>
+    <p><%= article.title %></p>
+<% end %>

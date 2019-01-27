@@ -6,6 +6,7 @@ class AdminsController < ApplicationController
 	end
 
 	def show
+		@article = Article.all
 		render :layout => nil
 	end
 
