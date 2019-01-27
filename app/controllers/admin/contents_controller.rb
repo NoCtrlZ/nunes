@@ -15,12 +15,20 @@ class Admin::ContentsController < ApplicationController
         redirect_to admin_root_path
     end
 
+    def change_display
+        @article = Article
+        @article = !@article.is_display
+        @article.save
+        redirect_to admin_root_path
+    end
+
 private
     def article_params
       params.require(:article).permit(
         :title,
         :topic,
-        :text)
+        :text,
+        :is_display)
     end
 
     def extract_article
