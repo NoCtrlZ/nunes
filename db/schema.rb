@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20190127083539) do
     t.string   "text",       limit: 255
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.boolean  "display",                default: false, null: false
+    t.boolean  "is_display",             default: false, null: false
   end
 
 end
