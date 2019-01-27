@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Nunes</title>
-</head>
-<body>
-<h1>This Is The Admin Top Page</h1>
+<h1>This is admin Top page</h1>
 <%= link_to '記事を作成', new_admin_content_path %>
-<% @article.each do |article|%>
-<%= link_to article.title, admin_content_path(article) %>
+<table>
+<tr>
+<td>記事タイトル</td>
+<td>コマンド</td>
+</tr>
+
+<% @article.each do |article| %>
+<tr>
+<td><li><%= link_to article.title, new_admin_content_path(article) %></li></td>
+<td><%= link_to "非表示" %>
+</tr>
 <% end %>
-</body>
+</table>
