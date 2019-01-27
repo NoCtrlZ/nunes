@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nunes</title>
+</head>
+<body>
+<h1>This Is The Admin Top Page</h1>
+<%= link_to '記事を作成', new_admin_content_path %>
+<% @article.each do |article|%>
+<%= link_to article.title, admin_content_path(article) %>
+<% end %>
+</body>
