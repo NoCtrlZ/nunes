@@ -3,5 +3,5 @@
 <%= link_to 'content', controller: :admins, action: :content %>
 
 <% @article.each do |article| %>
-    <p><%= article.title %></p>
+    <p><%= link_to article.title, new_admin_path(article) %></p>
 <% end %>
