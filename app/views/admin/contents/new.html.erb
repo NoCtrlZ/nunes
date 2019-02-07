@@ -6,7 +6,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js"></script>
 </head>
 <body>
-<%= form_for @article,:url => {:action => :create} do |f| %>
+<%= form_for (@article) do |f| %>
     <p>タイトル</p>
     <%= f.text_field :title %>
     <p>目次</p>

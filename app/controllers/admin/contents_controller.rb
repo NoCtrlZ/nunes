@@ -1,7 +1,8 @@
-class Admin::ContentsController < ApplicationController
+class Admin::ContentsController < Admin::BaseController
     before_action :extract_article , only: [:show, :edit, :update, :destroy]
+
     def new
-        @article = Article.new
+        @article = Article.all
         render :layout => nil
     end
 
@@ -16,7 +17,7 @@ class Admin::ContentsController < ApplicationController
     end
 
     def change_display
-        @article = Article
+        @article = Article.find params[:id]
         @article = !@article.is_display
         @article.save
         redirect_to admin_root_path

@@ -1,4 +1,4 @@
-class Admin::SelectsController < ApplicationController
+class Admin::SelectsController < Admin::BaseController
     def index
         @article = Article.all
         render :layout => nil
