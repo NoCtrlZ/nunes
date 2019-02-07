@@ -1,14 +1,14 @@
 <h1>This is admin Top page</h1>
-<%= link_to '記事を作成', new_admin_content_path %>
+<%= link_to '記事を作成', new_admin_article_path %>
 <table>
 <tr>
 <td>記事タイトル</td>
 <td>コマンド</td>
 </tr>
 
-<% @article.each do |article| %>
+<% @articles.each do |article| %>
 <tr>
-<td><li><%= link_to article.title, admin_content_path(@article) %></li></td>
+<td><li><%= link_to article.title, new_admin_article_path(article.id) %></li></td>
 <td><%= link_to "非表示", admin_change_display_path(article) %>
 </tr>
 <% end %>

@@ -1,12 +1,13 @@
-class Admin::ContentsController < ApplicationController
+class Admin::ArticlesController < ApplicationController
     before_action :extract_article , only: [:show, :edit, :update, :destroy]
 
     def new
-        @article = Article.all
+        @article = Article.new
         render :layout => nil
     end
 
     def show
+        @article = Article.find paramas[:id]
         render :layout => nil
     end
 
