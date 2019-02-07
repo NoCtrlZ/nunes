@@ -1,4 +1,23 @@
+<div class="main">
+    <div class="left">
 
-    <p><%= @article.title %></p>
-    <p><%= @article.topic %></p>
-    <p><%= @article.text %></p>
+        <div class="title">
+            <h1><%= @article.title %></h1>
+        </div>
+    
+        <div class="topic">
+            <p><%= @article.topic %></p>
+        </div>
+
+        <div class="content">
+            <p><%= markdown(@article.text) %></p>
+        </div>
+
+    </div>
+
+    <div class="right">
+    	<div class="latest-contents">
+    		<h3>最近の投稿</h3>
+    	</div>
+    </div>
+</div>
