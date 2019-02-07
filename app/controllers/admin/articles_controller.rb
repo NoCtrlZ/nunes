@@ -7,7 +7,7 @@ class Admin::ArticlesController < ApplicationController
     end
 
     def show
-        @article = Article.find paramas[:id]
+        @article = Article.find params[:id]
         render :layout => nil
     end
 
