@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
 
-    root 'selects#index'
+    root 'admin#index'
     resources :articles
     get 'change_display', to: 'articles#change_display'
 
