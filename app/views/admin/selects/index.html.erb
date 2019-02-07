@@ -8,7 +8,7 @@
 
 <% @article.each do |article| %>
 <tr>
-<td><li><%= link_to article.title, admin_content_path %></li></td>
+<td><li><%= link_to article.title, admin_content_path(@article) %></li></td>
 <td><%= link_to "非表示", admin_change_display_path(article) %>
 </tr>
 <% end %>

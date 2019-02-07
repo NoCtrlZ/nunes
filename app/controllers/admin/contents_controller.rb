@@ -1,4 +1,4 @@
-class Admin::ContentsController < Admin::BaseController
+class Admin::ContentsController < ApplicationController
     before_action :extract_article , only: [:show, :edit, :update, :destroy]
 
     def new
