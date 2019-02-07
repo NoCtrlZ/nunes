@@ -1,14 +1,13 @@
 class Admin::ArticlesController < ApplicationController
     before_action :extract_article , only: [:show, :edit, :update, :destroy, :change_display]
+    layout "admin"
 
     def new
         @article = Article.new
-        render :layout => nil
     end
 
     def show
         @article = Article.find params[:id]
-        render :layout => nil
     end
 
     def create
