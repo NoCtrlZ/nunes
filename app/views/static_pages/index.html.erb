@@ -1,1 +1,7 @@
-<h1>hello world</h1>
+<% @articles.each do |article| %>
+<ul>
+<% if article.is_display %>
+<li><%= link_to article.title, admin_article_path(article.id) %></li>
+<% end %>
+</ul>
+<% end %>
