@@ -1,5 +1,5 @@
 class Admin::ArticlesController < ApplicationController
-    before_action :extract_article , only: [:show, :edit, :update, :destroy]
+    before_action :extract_article , only: [:show, :edit, :update, :destroy, :change_display]
 
     def new
         @article = Article.new
@@ -19,7 +19,7 @@ class Admin::ArticlesController < ApplicationController
 
     def change_display
         @article = Article.find params[:id]
-        @article = !@article.is_display
+        @article.is_display = !@article.is_display
         @article.save
         redirect_to admin_root_path
     end
