@@ -1,6 +1,6 @@
 class Admin::SelectsController < ApplicationController
     def index
-        @article = Article.all
+        @articles = Article.all
         render :layout => nil
     end
 end
