@@ -15,6 +15,10 @@ class Admin::ArticlesController < ApplicationController
     end
 
     def update
+        @article = Article.find params[:id]
+        @article = Article.new(article_params)
+        @article.save
+        redirect_to admin_root_path
     end
 
     def create
