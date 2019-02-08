@@ -10,11 +10,14 @@
         </div>
 
         <div class="topic">
-            <p><%= simple_format(@article.topic) %></p>
+            <h2>この記事のコンテンツ</h2>
+            <div class="topic-contents">
+                <%= simple_format(@article.topic) %>
+            </div>
         </div>
 
         <div class="content">
-            <p><%= markdown(@article.text) %></p>
+            <%= markdown(@article.text) %>
         </div>
 
     </div>
