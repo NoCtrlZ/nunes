@@ -22,9 +22,9 @@ module MarkdownHelper
       }
 
       renderer = Redcarpet::Render::HTML.new(options)
+      renderer = Redcarpet::Render::OriginalHTML.new
       markdown = Redcarpet::Markdown.new(renderer, extensions)
       markdown.render(text).html_safe
     end
 
   end
-  
