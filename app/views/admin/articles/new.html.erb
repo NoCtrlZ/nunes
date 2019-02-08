@@ -1,6 +1,10 @@
 <%= form_for @article, url: admin_articles_path do |f| %>
     <p>タイトル</p>
     <%= f.text_field :title %>
+
+    <p>導入文</p>
+    <%= f.text_area :intro %>
+
     <p>目次</p>
     <%= f.text_area :topic %>
 

@@ -5,6 +5,10 @@
             <h1><%= @article.title %></h1>
         </div>
 
+        <div class="intro">
+            <%= simple_format(@article.intro) %>
+        </div>
+
         <div class="topic">
             <p><%= simple_format(@article.topic) %></p>
         </div>
