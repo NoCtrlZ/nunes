@@ -1,14 +1,24 @@
 class Admin::ArticlesController < ApplicationController
     before_action :extract_article , only: [:show, :edit, :update, :destroy, :change_display]
+    layout "admin"
 
     def new
         @article = Article.new
-        render :layout => nil
     end
 
     def show
         @article = Article.find params[:id]
-        render :layout => nil
+    end
+
+    def edit
+        @article = Article.find params[:id]
+    end
+
+    def update
+        @article = Article.find params[:id]
+        @article = Article.new(article_params)
+        @article.save
+        redirect_to admin_root_path
     end
 
     def create
@@ -20,6 +30,14 @@ class Admin::ArticlesController < ApplicationController
     def change_display
         @article = Article.find params[:id]
         @article.is_display = !@article.is_display
+        @article.save
+        redirect_to admin_root_path
+    end
+
+    def pre_destroy
+        @article = Article.find params[:id]
+        @article.is_destroy = true
+        @article.is_display = false
         @article.save
         redirect_to admin_root_path
     end

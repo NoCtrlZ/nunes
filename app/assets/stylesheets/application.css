@@ -1,15 +1,12 @@
 body {
 	margin: 0px;
-}
-
-h1 {
-	clear: both;
+	background-color: #e8e6e6;
 }
 
 header {
 	margin-top: 0px;
-	height: 55px;
-	background-color: #f4f4f4;
+	height: 80px;
+	background-color: #f6f6f6;
 }
 
 nav {
@@ -35,4 +32,23 @@ li.log-nav {
 	padding-top: 12px;
 	padding-left: 7px;
     padding-right: 7px;
+}
+
+.main {
+	margin-top: 45px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.left {
+    background-color: #ffffff;
+	width: 807px;
+	padding: 20px;
+	float: left;
+}
+
+.right {
+    background-color: #ffffff;
+	width: 25%;
+	float: right;
 }
