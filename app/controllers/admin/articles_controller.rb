@@ -46,6 +46,7 @@ private
     def article_params
       params.require(:article).permit(
         :title,
+        :intro,
         :topic,
         :text,
         :is_display)

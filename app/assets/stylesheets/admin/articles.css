@@ -3,9 +3,14 @@ form {
     width: 40%;
 }
 
-input {
+#article_title {
 	width: 80%;
     height: 25px;
+}
+
+#article_intro {
+    width: 80%;
+    height: 50px;
 }
 
 textarea {

@@ -4,13 +4,20 @@
         <div class="title">
             <h1><%= @article.title %></h1>
         </div>
-    
+
+        <div class="intro">
+            <%= simple_format(@article.intro) %>
+        </div>
+
         <div class="topic">
-            <p><%= @article.topic %></p>
+            <h2>この記事のコンテンツ</h2>
+            <div class="topic-contents">
+                <%= simple_format(@article.topic) %>
+            </div>
         </div>
 
         <div class="content">
-            <p><%= markdown(@article.text) %></p>
+            <%= markdown(@article.text) %>
         </div>
 
     </div>
