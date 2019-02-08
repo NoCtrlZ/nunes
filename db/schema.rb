@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190208120827) do
+ActiveRecord::Schema.define(version: 20190208125412) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20190208120827) do
     t.datetime "updated_at",                             null: false
     t.boolean  "is_display",             default: false, null: false
     t.boolean  "is_destroy",             default: false, null: false
+    t.string   "intro",      limit: 255
   end
 
 end

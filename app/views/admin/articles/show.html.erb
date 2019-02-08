@@ -1,4 +1,4 @@
 
-    <p><%= @article.title %></p>
-    <p><%= @article.topic %></p>
+    <h1><%= @article.title %></h1>
+    <p><%= simple_format(@article.topic) %></p>
     <p><%= markdown(@article.text) %></p>

@@ -4,9 +4,9 @@
         <div class="title">
             <h1><%= @article.title %></h1>
         </div>
-    
+
         <div class="topic">
-            <p><%= @article.topic %></p>
+            <p><%= simple_format(@article.topic) %></p>
         </div>
 
         <div class="content">
