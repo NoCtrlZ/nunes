@@ -1,5 +1,6 @@
 class Admin::ArticlesController < ApplicationController
     before_action :extract_article , only: [:show, :edit, :update, :destroy, :change_display]
+    protect_from_forgery :except => [:destroy]
     layout "admin"
 
     def new
@@ -31,6 +32,12 @@ class Admin::ArticlesController < ApplicationController
         @article = Article.find params[:id]
         @article.is_display = !@article.is_display
         @article.save
+        redirect_to admin_root_path
+    end
+
+    def destroy
+        @article = Article.find params[:id]
+        @article.destroy
         redirect_to admin_root_path
     end
 

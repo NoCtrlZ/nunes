@@ -18,6 +18,7 @@
 <% end %>
 
 <td><%= link_to "編集", edit_admin_article_path(article.id) %></td>
+<td><%= link_to "削除", admin_article_path(article.id),  :method => :delete, :confirm => 'Are you sure?' %>
 </tr>
 <% end %>
 </table>

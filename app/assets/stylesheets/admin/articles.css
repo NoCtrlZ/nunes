@@ -22,3 +22,7 @@ textarea {
     top: 0;
     left: 45%;
 }
+
+#markdown {
+    height: 450px;
+}
