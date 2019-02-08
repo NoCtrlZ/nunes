@@ -25,7 +25,14 @@ body {
 
 .topic-contents {
 	margin-left: 25%;
+	margin-right: 25%;
 	font-size: 23px;
+	border: solid 2px #c0c0c0;
+	background: #f4f4f4;
+}
+
+.topic-contents p {
+	padding-left: 4%;
 }
 
 .content {
