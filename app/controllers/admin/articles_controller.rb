@@ -1,5 +1,5 @@
 class Admin::ArticlesController < ApplicationController
-    before_action :extract_article , only: [:show, :edit, :update, :destroy, :change_display]
+    before_action :extract_article, only: [:show, :edit, :update, :destroy, :change_display]
     layout "admin"
 
     def new

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
   resources :articles
+  resources :contacts, except: [ :index, :show, :destroy, :edit, :update]
 
   namespace :admin do
 
