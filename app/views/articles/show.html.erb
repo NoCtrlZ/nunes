@@ -39,6 +39,11 @@
 
         <div id="contact">
             <h3>ご意見・お問い合わせ</h3>
+            <div id="front-contact">
+                <p>*お名前と連絡先は任意です。</p>
+                <p>*記事や機能の要望、改善すべき点を送信ください。</p>
+                <p>*是非、反映させていただきたいと思います。</p>
+            </div>
             <%= form_for @contact, url: contacts_path do |f| %>
                 <p>お名前</p>
                 <%= f.text_field :nickname %>
@@ -48,7 +53,10 @@
 
                 <p>内容</p>
                 <%= f.text_area :text %>
-                <%= f.submit %>
+
+                <div id="contact-button">
+                    <%= submit_tag "送信" %>
+                </div>
             <% end %>
         </div>
 
