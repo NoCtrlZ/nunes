@@ -39,7 +39,7 @@
 
         <div id="contact">
             <h3>ご意見・お問い合わせ</h3>
-            <%= form_for contacts_path do |f| %>
+            <%= form_for @contact, url: contacts_path do |f| %>
                 <p>お名前</p>
                 <%= f.text_field :nickname %>
 
