@@ -1,34 +1,34 @@
-<div class="main">
-    <div class="left">
+<div id="main">
+    <div id="left">
 
-        <div class="title">
+        <div id="title">
             <h1><%= @article.title %></h1>
         </div>
 
-        <div class="intro">
+        <div id="intro">
             <%= markdown(@article.intro) %>
         </div>
 
-        <div class="topic">
+        <div id="topic">
             <h2>この記事の目次</h2>
-            <div class="topic-contents">
+            <div id="topic-contents">
                 <%= markdown(@article.topic) %>
             </div>
         </div>
 
-        <div class="content">
+        <div id="content">
             <%= sanitize markdown(@article.text) %>
         </div>
 
     </div>
 
-    <div class="right">
-        <div class="article-topic">
+    <div id="right">
+        <div id="article-topic">
             <h3>この記事の目次</h3>
             <%= markdown(@article.topic) %>
         </div>
 
-    	<div class="latest-contents">
+    	<div id="latest-contents">
             <h3>最新の記事</h3>
             <ul>
                 <% @articles.each do |article| %>

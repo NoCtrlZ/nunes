@@ -20,16 +20,17 @@ body {
         }
     }
 
-    .main {
+    #main {
     	margin-top: 45px;
         margin-left: 10%;
-        margin-right: 10%;
-        .left {
+		margin-right: 10%;
+		overflow: hidden;
+        #left {
             background-color: #ffffff;
 	        width: 807px;
 	        padding: 20px;
 	        float: left;
-  	        .title {
+  	        #title {
 				  width: 100%;
 				  height: 100px;
   		        h1 {
@@ -42,7 +43,7 @@ body {
                 }
             }
 
-            .intro {
+            #intro {
 				margin-top: 40px;
 				margin-bottom: 30px;
 				margin-left: 2%;
@@ -56,7 +57,7 @@ body {
 				}
             }
 
-            .topic {
+            #topic {
 				border: solid 1px #c0c0c0;
 				background: #f4f4f4;
 				margin-left: 25%;
@@ -70,7 +71,7 @@ body {
 					padding-bottom: 5px;
 				}
 
-                .topic-contents {
+                #topic-contents {
 	                margin-left: 5%;
 	                margin-right: 5%;
 					font-size: 20px;
@@ -81,7 +82,7 @@ body {
                 }
             }
 
-            .content {
+            #content {
 	            padding-top: 40px;
 	            padding-left: 2%;
 	            padding-right: 2%;
@@ -112,7 +113,7 @@ body {
 					color: #0085ff;
 				}
 
-                .filepath {
+                #filepath {
 	                font-family: "Menlo";
 	                margin-left: 5%;
 	                margin-right: 5%;
@@ -125,7 +126,7 @@ body {
                     }
                 }
 
-                .highlight {
+                #highlight {
 	                background-color: #364549;
 	                margin-left: 5%;
 	                margin-right: 5%;
@@ -141,10 +142,10 @@ body {
 
             }
         }
-        .right {
+        #right {
 	        width: 25%;
-	        float: right;
-	        .article-topic {
+			float: right;
+	        #article-topic {
 				background-color: #ffffff;
 				ul {
 					padding-bottom: 20px;
@@ -163,7 +164,7 @@ body {
 					border-bottom: 3px solid #c1baba;
                 }
             }
-            .latest-contents {
+            #latest-contents {
 				background-color: #ffffff;
             	h3 {
 					text-align: center;
@@ -191,7 +192,24 @@ body {
 				}
             }
         }
-    }
+	}
+
+	footer {
+		width: 100%;
+		clear: both;
+		height: 100px;
+		background-color: #464c56;
+		margin-top: 30px;
+		.footer-area {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		    p {
+			    font-size: 13px;
+			    color: #ffffff;
+		    }
+	    }
+	}
 }
 
 li {
