@@ -35,6 +35,22 @@
                     <li><%= link_to article.title, admin_article_path(article.id) %></li>
                 <% end %>
             </ul>
-    	</div>
+        </div>
+
+        <div id="contact">
+            <h3>ご意見・お問い合わせ</h3>
+            <%= form_for contacts_path do |f| %>
+                <p>お名前</p>
+                <%= f.text_field :nickname %>
+
+                <p>連絡先</p>
+                <%= f.text_field :address %>
+
+                <p>内容</p>
+                <%= f.text_area :text %>
+                <%= f.submit %>
+            <% end %>
+        </div>
+
     </div>
 </div>
