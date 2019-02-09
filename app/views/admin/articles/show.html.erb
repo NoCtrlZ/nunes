@@ -1,4 +1,4 @@
 
     <h1><%= @article.title %></h1>
-    <%= simple_format(@article.topic) %>
+    <%= markdown(@article.topic) %>
     <%= sanitize markdown(@article.text) %>
