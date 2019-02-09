@@ -29,6 +29,9 @@ gem 'dotenv-rails'
 # Markdown
 gem 'redcarpet'
 
+# Syntax highlight
+gem 'rouge'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
