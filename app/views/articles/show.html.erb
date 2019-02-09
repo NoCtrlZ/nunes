@@ -17,7 +17,7 @@
         </div>
 
         <div class="content">
-            <%= markdown(@article.text) %>
+            <%= sanitize markdown(@article.text) %>
         </div>
 
     </div>

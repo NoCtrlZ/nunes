@@ -23,6 +23,7 @@ module MarkdownHelper
 
       renderer = Redcarpet::Render::HTML.new(options)
       renderer = Redcarpet::Render::OriginalHTML.new
+      renderer = RougeConfig::RougeRender.new(options)
       markdown = Redcarpet::Markdown.new(renderer, extensions)
       markdown.render(text).html_safe
     end
