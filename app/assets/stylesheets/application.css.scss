@@ -30,12 +30,14 @@ body {
 	        padding: 20px;
 	        float: left;
   	        .title {
+				  width: 100%;
   		        h1 {
-	                font-size: 27px;
+	                font-size: 32px;
 	                padding-top: 7px;
 	                float: left;
 					margin: 0px;
 					width: 100%;
+					text-align: center;
                 }
             }
 
@@ -103,17 +105,21 @@ body {
             }
         }
         .right {
-            background-color: #ffffff;
 	        width: 25%;
 	        float: right;
 	        .article-topic {
+				background-color: #ffffff;
 	        	h3 {
-                    text-align: center;
+					text-align: center;
+					margin-top: 0px;
+					padding-top: 10px;
                 }
             }
-            .latest-contents { 
+            .latest-contents {
+				background-color: #ffffff;
             	h3 {
-	                text-align: center;
+					text-align: center;
+					padding: 10px;
                 }
 
                 ul {
