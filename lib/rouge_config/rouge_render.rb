@@ -30,10 +30,10 @@ module RougeConfig
       # --- Compose language and filename section --- #
 
       info_inner_html = [filename, language].select(&:present?).map.with_index { |text, i|
-        i == 0 ? "<span class='highlight-info__inner'>#{text}</span>" : nil
+        i == 0 ? "<span>#{text}</span>" : nil
       }.compact.join('')
 
-      %(<div class='highlight-info'>
+      %(<div class='filepath'>
           #{info_inner_html}
         </div>
         #{result}
