@@ -138,3 +138,22 @@ code {
 #logo {
 	padding-top: 7px;
 }
+
+.article-topic h3 {
+    text-align: center;
+}
+
+.latest-contents h3 {
+	text-align: center;
+}
+
+.latest-contents ul {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.latest-contents li {
+	list-style: none;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
