@@ -1,4 +1,24 @@
+<div class="main">
+    <div class="left">
 
-    <h1><%= @article.title %></h1>
-    <%= simple_format(@article.topic) %>
-    <%= sanitize markdown(@article.text) %>
+        <div class="title">
+            <h1><%= @article.title %></h1>
+        </div>
+
+        <div class="intro">
+            <%= markdown(@article.intro) %>
+        </div>
+
+        <div class="topic">
+            <h2>この記事の目次</h2>
+            <div class="topic-contents">
+                <%= markdown(@article.topic) %>
+            </div>
+        </div>
+
+        <div class="content">
+            <%= sanitize markdown(@article.text) %>
+        </div>
+
+    </div>
+</div>
