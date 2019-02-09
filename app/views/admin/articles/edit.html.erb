@@ -1,33 +1,37 @@
-<%= form_for @article, url: admin_article_path do |f| %>
-    <p>タイトル</p>
-    <%= f.text_field :title %>
-    <p>目次</p>
-    <%= f.text_area :topic %>
+<%= form_for [:admin, @article] do |f| %>
+  <p>タイトル</p>
+  <%= f.text_field :title %>
 
-    <p>本文</p>
-    <div id="editor">
-     <textarea name="article[text]" id="markdown" class="textarea col-md-6 form-control" style="resize: none;" rows="20" v-model='input' debounce='50'></textarea>
+  <p>導入文</p>
+  <%= f.text_area :intro %>
 
-      <div class="submit">
-        <%= f.submit %>
-      </div>
+  <p>目次</p>
+  <%= f.text_area :topic %>
+
+  <p>本文</p>
+  <div id="editor">
+   <textarea name="article[text]" id="markdown" class="textarea col-md-6 form-control" style="resize: none;" rows="20" v-model='input' debounce='50'></textarea>
+
+    <div class="submit">
+      <%= f.submit %>
+    </div>
 
 <% end %>
 
-      <div class="admin-left">
-        <div v-html="input | marked"></div>
-      </div>
+    <div class="admin-left">
+      <div v-html="input | marked"></div>
     </div>
+  </div>
 
 <script>
 window.onload = function() {
 new Vue({
 el: '#editor',
 data: {
-  input: '<%== j @article.text %>',
+input: '<%== j @article.text %>',
 },
 filters: {
-  marked: marked,
+marked: marked,
 },
 });
 };
