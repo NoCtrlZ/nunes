@@ -97,3 +97,19 @@ li.log-nav {
 	width: 25%;
 	float: right;
 }
+
+.highlight {
+	background-color: #f7f4f4;
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+code {
+	font-family: "Menlo";
+}
+
+.highlight pre {
+	font-size: 16px;
+}
