@@ -131,3 +131,10 @@ code {
 .plainext pre {
 	background-color: #222425;
 }
+
+.logo {
+	text-align: center;
+}
+#logo {
+	padding-top: 7px;
+}
