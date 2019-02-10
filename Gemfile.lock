@@ -74,6 +74,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    meta-tags (2.11.1)
+      actionpack (>= 3.2.0, < 6.1)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
@@ -163,6 +165,7 @@ DEPENDENCIES
   dotenv-rails
   jbuilder (~> 2.0)
   jquery-rails
+  meta-tags
   mysql2 (>= 0.3.13, < 0.6.0)
   rails (= 4.2.11)
   redcarpet
