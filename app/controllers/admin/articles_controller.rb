@@ -48,6 +48,7 @@ private
         :intro,
         :topic,
         :text,
+        :point,
         :is_display)
     end
 

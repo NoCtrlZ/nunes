@@ -20,6 +20,11 @@ form p {
     height: 50px;
 }
 
+#article_point {
+    width: 80%;
+    height: 50px;
+}
+
 textarea {
     width: 80%;
     height: 80px;
