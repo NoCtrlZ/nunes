@@ -3,7 +3,6 @@ class Admin::AdminController < ApplicationController
 
     def index
         @articles = Article.all
-        @contacts = Contact.all
     end
 
 end
