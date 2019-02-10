@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
     root 'admin#index'
     resources :articles
+    resources :contacts
+    resources :news
     get 'change_display', to: 'articles#change_display'
     get 'pre_destroy', to: 'articles#pre_destroy'
 
