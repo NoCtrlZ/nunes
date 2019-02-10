@@ -25,7 +25,7 @@
             <h3>お知らせ</h3>
             <div id="news-list">
             <% @news.each do |news| %>
-            <p><span><%= l news.created_at, format: :short %></span><%= news.title %></p>
+            <p><span>(<%= l news.created_at, format: :news %>)</span><%= news.title %></p>
             <% end %>
             </div>
             </div>
