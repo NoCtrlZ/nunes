@@ -1,12 +1,17 @@
 <div id="main">
     <div id="left">
-        <% @articles.each do |article| %>
-            <% if article.is_display %>
-                <h2><%= link_to article.title, article_path(article.id) %></h2>
-                <p><%= article.point.truncate(124, separator: ' ') %></p>
-            <% end %>
-        <% end %>
+        <div id="article-top">
+            <h1>【記事一覧】</h1>
+        </div>
 
+        <div id="article-area">
+            <% @articles.each do |article| %>
+                <% if article.is_display %>
+                    <h2><%= link_to article.title, article_path(article.id) %></h2>
+                    <p><%= article.point.truncate(124, separator: ' ') %></p>
+                <% end %>
+            <% end %>
+        </div>
     </div>
 
     <div id="right">
