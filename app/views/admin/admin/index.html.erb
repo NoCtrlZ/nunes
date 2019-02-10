@@ -1,4 +1,8 @@
-<h1>This is admin Top page</h1>
+<ul>
+<li><%= link_to '記事管理', admin_root_path %></li>
+<li><%= link_to 'お問い合わせ管理', admin_contacts_path %></li>
+<li><%= link_to 'お知らせ管理', admin_news_index_path %>
+</ul>
 <h2>Article Manager</h2>
 <%= link_to '記事を作成', new_admin_article_path %>
 <table>
@@ -23,22 +27,5 @@
 <td><%= link_to "編集", edit_admin_article_path(article.id) %></td>
 <td><%= link_to "削除", (url_for controller: "admin/articles", action: "pre_destroy", id: article.id) %>
 </tr>
-<% end %>
-</table>
-
-<h2>Contact Manager</h2>
-<table>
-<tr>
-<td>名前</td>
-<td>連絡先</td>
-<td>内容<td>
-</tr>
-
-<% @contacts.each do |contact| %>
-<tr>
-<td><%= contact.nickname %></td>
-<td><%= contact.address %></td>
-<td><%= contact.text %></td>
-<tr>
 <% end %>
 </table>
