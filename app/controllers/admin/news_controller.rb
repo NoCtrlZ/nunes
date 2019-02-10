@@ -19,7 +19,7 @@ class Admin::NewsController < ApplicationController
 
     def update
         @news = News.find params[:id]
-        @news.update_attributes article_params
+        @news.update_attributes news_params
         redirect_to admin_news_index_path
     end
 

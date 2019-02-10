@@ -1,0 +1,32 @@
+<%= form_for [:admin, @news] do |f| %>
+    <p>タイトル</p>
+    <%= f.text_field :title %>
+
+    <p>本文</p>
+    <div id="editor">
+     <textarea name="news[text]" id="markdown" class="textarea col-md-6 form-control" style="resize: none;" rows="20" v-model='input' debounce='50'></textarea>
+
+      <div class="submit">
+      <%= submit_tag "作成" %>
+      </div>
+
+<% end %>
+
+      <div class="admin-left">
+        <div v-html="input | marked"></div>
+      </div>
+    </div>
+
+<script>
+window.onload = function() {
+new Vue({
+el: '#editor',
+data: {
+  input: '<%== j @news.text %>',
+},
+filters: {
+  marked: marked,
+},
+});
+};
+</script>
