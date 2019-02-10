@@ -15,7 +15,7 @@ default: &default
   pool: 5
   username: root
   password:
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
 
 development:
   <<: *default
@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: nunes_production
-  username: nunes
-  password: <%= ENV['NUNES_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  post: <%= ENV['DB_PORT'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
