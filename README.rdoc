@@ -1,1 +1,0 @@
-bundle exec unicorn -c /var/www/project/nunes/config/unicorn.rb -D -E production
