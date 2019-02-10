@@ -3,6 +3,11 @@
 form {
     margin-left: 10%;
     width: 40%;
+    background-color: #ffffff;
+}
+
+form p {
+    margin-top: 0px;
 }
 
 #article_title {
@@ -15,9 +20,14 @@ form {
     height: 50px;
 }
 
+#article_point {
+    width: 80%;
+    height: 50px;
+}
+
 textarea {
     width: 80%;
-    height: 100px;
+    height: 80px;
 }
 
 .submit {
@@ -28,6 +38,7 @@ textarea {
     position: absolute;
     top: 0;
     left: 45%;
+    background-color: #ffffff;
 }
 
 #markdown {

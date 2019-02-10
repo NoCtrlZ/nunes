@@ -139,8 +139,32 @@ body {
                         }
                     }
                 }
+			}
 
-            }
+			#article-area {
+				h2 {
+					padding-top: 50px;
+				}
+				p {
+					color: #696161;
+				}
+				a {
+					text-decoration: none;
+					color: #1693a2;
+				}
+			}
+
+			#article-top {
+				h1 {
+					text-align: center;
+					font-size: 35px;
+					color: #695555;
+					margin-top: 0px;
+					margin-left: 20%;
+					margin-right: 20%;
+					border-bottom: 2px solid #b1acac
+				}
+			}
         }
         #right {
 	        width: 25%;
