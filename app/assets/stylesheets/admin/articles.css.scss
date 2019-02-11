@@ -1,0 +1,66 @@
+@import "../rouge.css";
+
+#new-article {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    margin-top: 50px;
+    #admin-right {
+        width: 50%;
+        float: left;
+        form {
+            background-color: #ffffff;
+            padding-left: 5%;
+            padding-top: 20px;
+            p {
+                margin-top: 15px;
+            }
+            #article_title {
+                width: 80%;
+                height: 25px;
+            }
+            #article_intro {
+                width: 80%;
+                height: 35px;
+            }
+            #article_point {
+                width: 80%;
+                height: 35px;
+            }
+            #article_topic {
+                width: 80%;
+                height: 50px;
+            }
+            #article_text {
+                width: 80%;
+                height: 450px;
+            }
+            .submit {
+                padding-left: 30%;
+                padding-bottom: 50px;
+                padding-top: 20px;
+                input {
+                    width: 100px;
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+    #admin-left {
+        width: 50%;
+        float: right;
+/*        position: absolute;
+        top: 0;
+        left: 45%;
+        background-color: #ffffff; */
+    }
+}
+
+
+
+
+
+
+
