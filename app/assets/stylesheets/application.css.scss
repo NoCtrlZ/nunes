@@ -90,6 +90,9 @@ body {
 					    margin: 0px;
 					    width: 100%;
 					    text-align: center;
+					    @include sm() {
+							font-size: 27px;
+						}
                     }
                 }
 
@@ -136,6 +139,11 @@ body {
 	                    p {
 	                        padding-left: 4%;
                         }
+                        ul {
+                        	@include sm() {
+							    padding-left: 15px;
+						    }
+                        }
                     }
                 }
 
@@ -152,6 +160,11 @@ body {
 	    				margin-top: 50px;
 	    				margin-bottom: 50px;
 	    				border-left: 5px solid #0fd4e8;
+	    				@include sm() {
+							font-size: 25px;
+							padding-top: 5px;
+							padding-bottom: 5px;
+						}
 	    			}
 
 	    			h3 {
@@ -162,8 +175,11 @@ body {
 		    			padding-top: 11px;
 		    			padding-bottom: 10px;
 		    			height: 35px;
+		    			@include sm() {
+							font-size: 18px;
+						}
                         @include mb() {
-							font-size: 20px;
+							font-size: 23px;
 							padding-bottom: 0px;
 						}
 		    		}
