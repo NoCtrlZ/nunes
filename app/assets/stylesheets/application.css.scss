@@ -34,9 +34,13 @@ body {
 
     #main {
     	margin-top: 45px;
-        margin-left: 5%;
-		margin-right: 5%;
+        margin-left: 10%;
+		margin-right: 10%;
 		overflow: hidden;
+		@include mb() {
+			margin-left: 5%;
+			margin-right: 5%;
+		}
         #left {
             background-color: #ffffff;
 	        width: 807px;
