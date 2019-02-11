@@ -7,6 +7,8 @@
 ### MySQL
 /var/log/mysqld.log
 ## 重要なコマンド
+## Unicorn停止
+kill -QUIT `cat /var/run/unicorn.pid`
 ### Unicorn起動
 bundle exec unicorn -c /var/www/project/nunes/config/unicorn.rb -D -E production
 ### Nginx再起動
