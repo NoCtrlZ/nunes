@@ -2,8 +2,7 @@
 
 $sm: 460px;
 $mb: 750px;
-$pc: 1024px;
-$big: 1025px;
+$pc: 1440px;
 
 @mixin sm {
   @media (max-width: ($sm)) {
@@ -63,9 +62,13 @@ body {
 			margin-left: 3%;
 			margin-right: 3%;
 		}
+		@include pc() {
+	    	margin-left: 5%;
+	    	margin-right: 5%;
+	    }
         #left {
             background-color: #ffffff;
-	        width: 807px;
+	        width: 70%;
 	        padding: 20px;
 			float: left;
 			@include mb() {
