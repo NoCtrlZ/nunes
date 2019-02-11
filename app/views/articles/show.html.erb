@@ -1,26 +1,28 @@
 <% set_meta_tags title: @article.title, description: @article.point, og: { title: @article.title, type: 'article', image: image_url('icon.jpg') } %>
 <div id="main">
     <div id="left">
+        <div id="container">
 
-        <div id="title">
-            <h1><%= @article.title %></h1>
-        </div>
-
-        <div id="intro">
-            <%= markdown(@article.intro) %>
-        </div>
-
-        <div id="topic">
-            <h2>この記事の目次</h2>
-            <div id="topic-contents">
-                <%= markdown(@article.topic) %>
+            <div id="title">
+                <h1><%= @article.title %></h1>
             </div>
-        </div>
 
-        <div id="content">
-            <%= sanitize markdown(@article.text) %>
-        </div>
+            <div id="intro">
+                <%= markdown(@article.intro) %>
+            </div>
 
+            <div id="topic">
+                <h2>この記事の目次</h2>
+                <div id="topic-contents">
+                    <%= markdown(@article.topic) %>
+                </div>
+            </div>
+
+            <div id="content">
+                <%= sanitize markdown(@article.text) %>
+            </div>
+
+        </div>
     </div>
 
     <div id="right">
