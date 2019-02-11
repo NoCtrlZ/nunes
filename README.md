@@ -20,5 +20,6 @@ sudo service nginx restart
 ### MySQL起動
 sudo service mysqld start
 ## エラーの勘所
+MySQLとNginxの起動がうまくいった場合は、Unicornに問題があるため、/var/run/unicorn.logを確認する
 Unicorn起動時にエラーが発生する場合は、MySQLの接続ができていない可能性が高い  
 MySQLのコネクションエラーが発生する場合は、pidの権限を確認
