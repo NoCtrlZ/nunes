@@ -21,7 +21,6 @@ module MarkdownHelper
         no_intra_emphasis:            true
       }
 
-      renderer = Redcarpet::Render::HTML.new(options)
       renderer = RougeConfig::RougeRender.new(options)
       markdown = Redcarpet::Markdown.new(renderer, extensions)
       markdown.render(text).html_safe
