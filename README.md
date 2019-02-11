@@ -6,6 +6,8 @@
 /var/log/nginx/access.log
 ### MySQL
 /var/log/mysqld.log
+### Application
+/var/www/project/nunes/log/production.log
 ## 重要なコマンド
 ### Unicorn停止
 kill -QUIT `cat /var/run/unicorn.pid`
@@ -17,3 +19,6 @@ ps -ef | grep unicorn | grep -v grep
 sudo service nginx restart
 ### MySQL起動
 sudo service mysqld start
+## エラーの勘所
+Unicorn起動時にエラーが発生する場合は、MySQLの接続ができていない可能性が高い  
+MySQLのコネクションエラーが発生する場合は、pidの権限を確認
