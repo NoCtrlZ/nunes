@@ -269,17 +269,29 @@ body {
 	                padding-left: 20px;
 					padding-right: 20px;
 					padding-bottom: 20px;
+					@include mb() {
+						width: 85%;
+						margin-left: auto;
+						margin-right: auto;
+					}
                 }
 
                 li {
 	                padding-top: 3px;
-	                padding-bottom: 3px;
+					padding-bottom: 3px;
+					@include mb() {
+						padding-top: 7px;
+						padding-bottom: 7px;
+					}
 				}
 
 				a {
 					text-decoration: none;
 					color: #117ec6;
 					font-size: 14px;
+					@include mb() {
+						font-size: 18px;
+					}
 				}
 			}
 			#contact {
@@ -295,7 +307,7 @@ body {
 					margin-left: 40px;
 					font-size: 3px;
 					@include mb() {
-						margin-left: 15%;
+						margin-left: 25%;
 					}
 					p {
 						margin-top: 0px;
@@ -304,14 +316,17 @@ body {
 				form {
 					margin-left: 40px;
 					@include mb() {
-						margin-left: 15%;
-						margin-right: 15%;
+						margin-left: 25%;
+						margin-right: 25%;
 					}
 				}
 				input {
 					height: 15px;
 					width: 80%;
 					border: 2px solid #cacaca;
+					@include mb() {
+						width: 100%;
+					}
 				}
 				p {
 					margin-bottom: 0px;
@@ -320,12 +335,18 @@ body {
 					width: 80%;
 					height: 150px;
 					border: 2px solid #655b5b;
+					@include mb() {
+						width: 100%;
+					}
 				}
 				#contact-button {
 					padding-bottom: 20px;
 					margin-right: 40px;
 					text-align: center;
 					padding-top: 10px;
+					@include mb() {
+						margin-right: 0px;
+					}
 					input {
 						width: 40%;
 						height: 30px;
