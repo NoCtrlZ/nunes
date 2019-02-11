@@ -10,7 +10,7 @@
 ### Unicorn停止
 kill -QUIT `cat /var/run/unicorn.pid`
 ### Unicorn起動
-bundle exec unicorn -c /var/www/project/nunes/config/unicorn.rb -D -E production
+bundle exec unicorn_rails -c /var/www/project/nunes/config/unicorn.rb -D -E production
 ### Unicornプロセス確認
 ps -ef | grep unicorn | grep -v grep
 ### Nginx再起動
