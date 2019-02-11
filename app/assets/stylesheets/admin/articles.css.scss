@@ -8,8 +8,9 @@
     background-color: #ffffff;
     margin-top: 50px;
     #admin-right {
-        width: 50%;
+        width: 49%;
         float: left;
+        border-right: 2px solid #f4f4f4;
         form {
             background-color: #ffffff;
             padding-left: 5%;
@@ -49,12 +50,8 @@
         }
     }
     #admin-left {
-        width: 50%;
+        width: 49%;
         float: right;
-/*        position: absolute;
-        top: 0;
-        left: 45%;
-        background-color: #ffffff; */
     }
 }
 
