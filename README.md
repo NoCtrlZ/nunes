@@ -17,3 +17,6 @@ ps -ef | grep unicorn | grep -v grep
 sudo service nginx restart
 ### MySQL起動
 sudo service mysqld start
+## エラーの勘所
+Unicorn起動時にエラーが発生する場合は、MySQLの接続ができていない可能性が高い
+MySQLのコネクションエラーが発生する場合は、pidの権限を確認
