@@ -1,15 +1,24 @@
 @import 'rouge';
 
-$breakpoints: (
-  'mb': 'screen and (max-width: 750px)',
-  'pc': 'screen and (min-width: 751px)',
-  'dis': 'screen and (min-width: 1200px)',
-) !default;
+$sm: 460px;
+$mb: 750px;
+$pc: 1024px;
+$big: 1025px;
 
-@mixin mb($breakpoint: mb) {
-	@media #{map-get($breakpoints, $breakpoint)} {
-	  @content;
-	}
+@mixin sm {
+  @media (max-width: ($sm)) {
+    @content;
+  }
+}
+@mixin mb {
+  @media (max-width: ($mb)) {
+    @content;
+  }
+}
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
 }
 
 body {
@@ -20,11 +29,24 @@ body {
 	    margin-top: 0px;
 	    height: 80px;
 	    background-color: #f6f6f6;
+	    @include sm() {
+	    	height: 60px;
+	    }
 	    nav {
 	        margin-right: 100px;
 	        margin-left: 100px;
+	        @include sm() {
+	        	margin-right: 50px;
+	            margin-left: 50px;
+	        }
 	        .logo {
 	            text-align: center;
+	            img {
+	            	width: 250px;
+	            	@include sm() {
+	            		width: 200px;
+	            	}
+	            }
 	            #logo {
 	                padding-top: 7px;
                 }
@@ -38,8 +60,8 @@ body {
 		margin-right: 10%;
 		overflow: hidden;
 		@include mb() {
-			margin-left: 5%;
-			margin-right: 5%;
+			margin-left: 3%;
+			margin-right: 3%;
 		}
         #left {
             background-color: #ffffff;
@@ -181,9 +203,12 @@ body {
 
 			    #article-area {
 			    	h2 {
-						padding-top: 50px;
+						padding-top: 50px;			
 						@include mb() {
 							font-size: 30px;
+						}
+						@include sm() {
+							font-size: 20px;
 						}
 			    	}
 			    	p {
@@ -191,6 +216,9 @@ body {
 			    		@include mb() {
 			    			font-size: 20px;
 			    		}
+			    		@include sm() {
+							font-size: 15px;
+						}
 			    	}
 			    	a {
 			    		text-decoration: none;
@@ -206,7 +234,10 @@ body {
 			    		margin-top: 0px;
 			    		margin-left: 20%;
 			    		margin-right: 20%;
-			    		border-bottom: 2px solid #b1acac
+			    		border-bottom: 2px solid #b1acac;
+			    		@include sm() {
+			    			font-size: 27px;
+			    		}
 			    	}
 			    }
 		    }
