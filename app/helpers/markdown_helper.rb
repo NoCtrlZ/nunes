@@ -10,7 +10,6 @@ module MarkdownHelper
 
       extensions = {
         autolink:                     true,
-        no_intra_emphasis:            true,
         fenced_code_blocks:           true,
         tables:                       true,
         footnotes:                    true,
@@ -21,6 +20,7 @@ module MarkdownHelper
         no_intra_emphasis:            true
       }
 
+      renderer = Redcarpet::Render::HTML.new(options)
       renderer = RougeConfig::RougeRender.new(options)
       markdown = Redcarpet::Markdown.new(renderer, extensions)
       markdown.render(text).html_safe
