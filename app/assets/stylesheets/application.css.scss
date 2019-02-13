@@ -233,7 +233,7 @@ body {
 
 			    #article-area {
 			    	h2 {
-						padding-top: 50px;			
+						padding-top: 50px;
 						@include mb() {
 							font-size: 30px;
 						}
@@ -254,7 +254,25 @@ body {
 			    		text-decoration: none;
 			    		color: #1693a2;
 			    	}
-			    }
+				}
+
+				#article-pager {
+					margin-top: 60px;
+					margin-bottom: 20px;
+					nav {
+						font-size: 22px;
+						text-align: center;
+						span {
+							font-family: serif;
+							.next {
+							color: #129c12;
+							}
+							a {
+								text-decoration: none;
+							}
+					    }
+					}
+				}
 
 			    #article-top {
 			    	h1 {

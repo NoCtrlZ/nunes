@@ -7,8 +7,8 @@ ja:
       news: ! '%Y.%m/%d'
   views:
     pagination:
-      first: "最初"
-      last: "最後"
-      previous: "前"
-      next: "次"
+      first: "最初へ"
+      last: "最後へ"
+      previous: "前へ"
+      next: "次へ"
       truncate: "..."
