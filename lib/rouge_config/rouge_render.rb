@@ -5,12 +5,6 @@ require 'rouge/plugins/redcarpet'
 module RougeConfig
   class RougeRender < Redcarpet::Render::HTML
     include Rouge::Plugins::Redcarpet
-
-    def header(text, level)
-        level += 1
-        "<h#{level}>#{text}</h#{level}>"
-    end
-
     def block_code(code, language)
 
       # --- Extract file name ---------------------- #
