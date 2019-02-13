@@ -22,9 +22,9 @@ sudo service mysqld start
 ### Assetプリコンパイル
 bundle exec rake assets:precompile RAILS_ENV=production
 ## エラーの勘所
-MySQLとNginxの起動がうまくいった場合は、Unicornに問題があるため、/var/run/unicorn.logを確認する
-assetディレクトリを編集した場合は、Assetプリコンパイルを行う
+MySQLとNginxの起動がうまくいった場合は、Unicornに問題があるため、/var/run/unicorn.logを確認する  
+assetディレクトリを編集した場合は、Assetプリコンパイルを行う  
 Unicorn起動時にエラーが発生する場合は、MySQLの接続ができていない可能性が高い  
-MySQLのコネクションエラーが発生する場合は、pidの権限を確認
+MySQLのコネクションエラーが発生する場合は、pidの権限を確認  
 ## 変更の適用
 MySQLとhtmlの変更はUnicornのリスタートなしで適用される
