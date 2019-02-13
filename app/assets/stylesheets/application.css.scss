@@ -109,6 +109,10 @@ body {
 						@include mb() {
 							margin-top: 80px;
 						}
+						a {
+							color: #3bff00;
+							text-decoration: none;
+						}
 	    			}
 
 	    			strong {
