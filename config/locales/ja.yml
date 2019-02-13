@@ -5,3 +5,8 @@ ja:
       long: ! '%Y年%m月%d日(%a) %H時%M分%S秒 %z'
       short: ! '%Y年%m月%d日 %H:%M'
       news: ! '%Y.%m/%d'
+  views:
+    pagination:
+      previous: "前へ"
+      next: "次へ"
+      truncate: "..."

@@ -233,7 +233,7 @@ body {
 
 			    #article-area {
 			    	h2 {
-						padding-top: 50px;			
+						padding-top: 50px;
 						@include mb() {
 							font-size: 30px;
 						}
@@ -254,7 +254,39 @@ body {
 			    		text-decoration: none;
 			    		color: #1693a2;
 			    	}
-			    }
+				}
+
+				#article-pager {
+					margin-top: 100px;
+					margin-bottom: 20px;
+					nav {
+						font-size: 25px;
+						text-align: center;
+						span {
+							font-family: serif;
+							a {
+								text-decoration: none;
+								color: #13cc46;
+							}
+						}
+						.page {
+							padding-left: 15px;
+							padding-right: 15px;
+						}
+						.prev {
+							padding-right: 10%;
+						}
+						.next {
+							padding-left: 10%;
+						}
+						.first {
+							display: none;
+						}
+						.last {
+							display: none;
+						}
+					}
+				}
 
 			    #article-top {
 			    	h1 {
