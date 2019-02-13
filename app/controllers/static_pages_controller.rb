@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
 	def index
-		@articles = Article.page(params[:page]).per(5).order(created_at: :desc)
+		@articles = Article.page(params[:page]).per(10).order(created_at: :desc)
 		@contact = Contact.new
 		@news = News.all
 	end
