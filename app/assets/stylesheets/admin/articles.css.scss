@@ -55,9 +55,19 @@
     }
 }
 
-
-
-
-
-
-
+nav {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.article-admin {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#not-display-article {
+    padding-top: 30px;
+}
+#display-article {
+    padding-top: 30px;
+}
