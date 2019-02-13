@@ -35,6 +35,9 @@ gem 'rouge'
 # Make meta tag
 gem 'meta-tags'
 
+# Make pager
+gem 'kaminari'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
