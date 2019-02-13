@@ -14,11 +14,11 @@ module RougeConfig
     def block_code(code, language)
 
       # --- Extract file name ---------------------- #
-      filename = ''
-      regx = Regexp.new(/(<!--\s?filename:(\s?.{1,}\s?)-->\n?)/)
+      ob = ''
+      regx = Regexp.new(/(<!--\s?ob:(\s?.{1,}\s?)-->\n?)/)
       if !(code =~ regx).nil?
         code.match(regx)
-        filename = $2.try(:strip) || ''
+        ob = $2.try(:strip) || ''
         code.gsub!(regx, '')
       end
       # -------------------------------------------- #
@@ -30,11 +30,11 @@ module RougeConfig
       formatter = rouge_formatter(lexer)
       result = formatter.format(lexer.lex(code))
 
-      return result if language.blank? && filename.blank?
+      return result if language.blank? && ob.blank?
 
-      # --- Compose language and filename section --- #
+      # --- Compose language and ob section --- #
 
-      info_inner_html = [filename, language].select(&:present?).map.with_index { |text, i|
+      info_inner_html = [ob, language].select(&:present?).map.with_index { |text, i|
         i == 0 ? "<span>#{text}</span>" : nil
       }.compact.join('')
 
