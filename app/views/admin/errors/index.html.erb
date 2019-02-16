@@ -20,6 +20,7 @@
                         <td><%= link_to "削除", (url_for controller: "admin/errors", action: "pre_destroy", id: error.id) %>
                     <% end %>
                 </tr>
+            <% end %>
         </table>
     </div>
 
@@ -31,6 +32,7 @@
                 <td>コマンド</td>
             </tr>
 
+            <% @errors.each do |error| %>
                 <tr>
                     <% next if error.is_destroy %>
                         <% if !error.is_display %>

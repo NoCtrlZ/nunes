@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     get 'command/pre_destroy', to: 'commands#pre_destroy'
     get 'error/change_display', to: 'errors#change_display'
     get 'error/pre_destroy', to: 'errors#pre_destroy'
+    get 'word/change_display', to: 'words#change_display'
+    get 'word/pre_destroy', to: 'words#pre_destroy'
+
 
   end
 end

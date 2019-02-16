@@ -3,16 +3,10 @@
     <div id="admin-right">
       <%= form_for [:admin, @word] do |f| %>
         <p>タイトル</p>
-        <%= f.text_field :title, class: 'title' %>
-
-        <p>導入文</p>
-        <%= f.text_area :intro, class: 'small-input' %>
-
-        <p>要約</p>
-        <%= f.text_area :point, class: 'small-input' %>
+        <%= f.text_field :word, class: 'title' %>
 
         <p>本文</p>
-        <%= f.text_area :text, class: 'big-input', "v-model":"input" %>
+        <%= f.text_area :meaning, class: 'big-input', "v-model":"input" %>
 
         <div class="submit">
           <%= submit_tag "作成" %>
@@ -33,7 +27,7 @@ window.onload = function() {
 new Vue({
 el: '#editor',
 data: {
-  input: '<%== j @word.text %>',
+  input: '<%== j @word.meaning %>',
 },
 filters: {
   marked: marked,

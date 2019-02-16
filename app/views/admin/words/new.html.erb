@@ -3,7 +3,7 @@
     <div id="admin-right">
       <%= form_for [:admin, @word] do |f| %>
         <p>タイトル</p>
-        <%= f.text_field :title, class: 'title' %>
+        <%= f.text_field :word, class: 'title' %>
 
         <p>本文</p>
         <%= f.text_area :meaning, class: 'big-input', "v-model":"input" %>
