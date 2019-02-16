@@ -1,13 +1,14 @@
 <div id="admin-main">
-    <h2>Word Manager</h2>
+    <h2>単語一覧</h2>
     <%= link_to 'エラー記事を作成', new_admin_word_path %>
 
     <div id="not-display">
+        <h3>公開コマンド一覧</h3>
         <table>
             <tr>
                 <td>記事タイトル</td>
-                <td>公開設定</td>
-                <td>コマンド</td>
+                <td class="small-td">公開設定</td>
+                <td class="small-td">コマンド</td>
             </tr>
 
             <% @words.each do |word| %>
@@ -15,9 +16,12 @@
                     <% next if word.is_destroy %>
                         <% if word.is_display %>
                         <td><%= link_to word.word, admin_word_path(word.id) %></td>
-                        <td><%= link_to "非公開", (url_for controller: "admin/words", action: "change_display", id: word.id) %>
-                        <td><%= link_to "編集", edit_admin_word_path(word.id) %></td>
-                        <td><%= link_to "削除", (url_for controller: "admin/words", action: "pre_destroy", id: word.id) %>
+                        <td class="small-td"><%= link_to "非公開", (url_for controller: "admin/words", action: "change_display", id: word.id) %>
+                        <td class="small-td">
+                            <ul>
+                                <li><%= link_to "編集", edit_admin_word_path(word.id) %></li>
+                                <li><%= link_to "削除", (url_for controller: "admin/words", action: "pre_destroy", id: word.id) %></li>
+                            </ul>
                     <% end %>
                 </tr>
             <% end %>
@@ -25,11 +29,12 @@
     </div>
 
     <div id="display">
+        <h3>未公開コマンド一覧</h3>
         <table>
             <tr>
                 <td>記事タイトル</td>
-                <td>公開設定</td>
-                <td>コマンド</td>
+                <td class="small-td">公開設定</td>
+                <td class="small-td">コマンド</td>
             </tr>
 
             <% @words.each do |word| %>
@@ -37,9 +42,12 @@
                     <% next if word.is_destroy %>
                         <% if !word.is_display %>
                         <td><%= link_to word.word, admin_word_path(word.id) %></td>
-                        <td><%= link_to "公開", (url_for controller: "admin/words", action: "change_display", id: word.id) %>
-                        <td><%= link_to "編集", edit_admin_word_path(word.id) %></td>
-                        <td><%= link_to "削除", (url_for controller: "admin/words", action: "pre_destroy", id: word.id) %>
+                        <td class="small-td"><%= link_to "公開", (url_for controller: "admin/words", action: "change_display", id: word.id) %>
+                        <td class="small-td">
+                            <ul>
+                                <li><%= link_to "編集", edit_admin_word_path(word.id) %></li>
+                                <li><%= link_to "削除", (url_for controller: "admin/words", action: "pre_destroy", id: word.id) %></li>
+                            </ul>
                     <% end %>
                 </tr>
             <% end %>

@@ -1,13 +1,14 @@
 <div id="admin-main">
-    <h2>Command Manager</h2>
+    <h2>コマンド一覧</h2>
     <%= link_to '記事を作成', new_admin_command_path %>
 
     <div id="not-display">
+        <h3>公開コマンド一覧</h3>
         <table>
             <tr>
                 <td>記事タイトル</td>
-                <td>公開設定</td>
-                <td>コマンド</td>
+                <td class="small-td">公開設定</td>
+                <td class="small-td">コマンド</td>
             </tr>
 
             <% @commands.each do |command| %>
@@ -15,9 +16,13 @@
                     <% next if command.is_destroy %>
                         <% if command.is_display %>
                         <td><%= link_to command.title, admin_command_path(command.id) %></td>
-                        <td><%= link_to "非公開", (url_for controller: "admin/commands", action: "change_display", id: command.id) %>
-                        <td><%= link_to "編集", edit_admin_command_path(command.id) %></td>
-                        <td><%= link_to "削除", (url_for controller: "admin/commands", action: "pre_destroy", id: command.id) %>
+                        <td class="small-td"><%= link_to "非公開", (url_for controller: "admin/commands", action: "change_display", id: command.id) %>
+                        <td class="small-td">
+                            <ul>
+                                <li><%= link_to "編集", edit_admin_command_path(command.id) %></li>
+                                <li><%= link_to "削除", (url_for controller: "admin/commands", action: "pre_destroy", id: command.id) %></li>
+                            </ul>
+                        </td>
                     <% end %>
                 </tr>
             <% end %>
@@ -25,11 +30,12 @@
     </div>
 
     <div id="display">
+        <h3>未公開コマンド一覧</h3>
         <table>
             <tr>
                 <td>記事タイトル</td>
-                <td>公開設定</td>
-                <td>コマンド</td>
+                <td class="small-td">公開設定</td>
+                <td class="small-td">コマンド</td>
             </tr>
 
             <% @commands.each do |command| %>
@@ -37,9 +43,13 @@
                     <% next if command.is_destroy %>
                         <% if !command.is_display %>
                         <td><%= link_to command.title, admin_command_path(command.id) %></td>
-                        <td><%= link_to "公開", (url_for controller: "admin/commands", action: "change_display", id: command.id) %>
-                        <td><%= link_to "編集", edit_admin_command_path(command.id) %></td>
-                        <td><%= link_to "削除", (url_for controller: "admin/commands", action: "pre_destroy", id: command.id) %>
+                        <td class="small-td"><%= link_to "公開", (url_for controller: "admin/commands", action: "change_display", id: command.id) %>
+                        <td class="small-td">
+                            <ul>
+                                <li><%= link_to "編集", edit_admin_command_path(command.id) %></li>
+                                <li><%= link_to "削除", (url_for controller: "admin/commands", action: "pre_destroy", id: command.id) %></li>
+                            </ul>
+                        </td>
                     <% end %>
                 </tr>
             <% end %>

@@ -1,13 +1,14 @@
 <div id="admin-main">
-    <h2>Error Manager</h2>
+    <h2>エラー一覧</h2>
     <%= link_to 'エラー記事を作成', new_admin_error_path %>
 
     <div id="not-display">
+        <h3>公開エラー一覧</h3>
         <table>
             <tr>
                 <td>記事タイトル</td>
-                <td>公開設定</td>
-                <td>コマンド</td>
+                <td class="small-td">公開設定</td>
+                <td class="small-td">コマンド</td>
             </tr>
 
             <% @errors.each do |error| %>
@@ -15,9 +16,12 @@
                     <% next if error.is_destroy %>
                         <% if error.is_display %>
                         <td><%= link_to error.title, admin_error_path(error.id) %></td>
-                        <td><%= link_to "非公開", (url_for controller: "admin/errors", action: "change_display", id: error.id) %>
-                        <td><%= link_to "編集", edit_admin_error_path(error.id) %></td>
-                        <td><%= link_to "削除", (url_for controller: "admin/errors", action: "pre_destroy", id: error.id) %>
+                        <td class="small-td"><%= link_to "非公開", (url_for controller: "admin/errors", action: "change_display", id: error.id) %>
+                        <td class="small-td">
+                            <ul>
+                                <li><%= link_to "編集", edit_admin_error_path(error.id) %></li>
+                                <li><%= link_to "削除", (url_for controller: "admin/errors", action: "pre_destroy", id: error.id) %></li>
+                            </ul>
                     <% end %>
                 </tr>
             <% end %>
@@ -25,11 +29,12 @@
     </div>
 
     <div id="display">
+        <h3>未公開エラー一覧</h3>
         <table>
             <tr>
                 <td>記事タイトル</td>
-                <td>公開設定</td>
-                <td>コマンド</td>
+                <td class="small-td">公開設定</td>
+                <td class="small-td">コマンド</td>
             </tr>
 
             <% @errors.each do |error| %>
@@ -37,9 +42,12 @@
                     <% next if error.is_destroy %>
                         <% if !error.is_display %>
                         <td><%= link_to error.title, admin_error_path(error.id) %></td>
-                        <td><%= link_to "公開", (url_for controller: "admin/errors", action: "change_display", id: error.id) %>
-                        <td><%= link_to "編集", edit_admin_error_path(error.id) %></td>
-                        <td><%= link_to "削除", (url_for controller: "admin/errors", action: "pre_destroy", id: error.id) %>
+                        <td class="small-td"><%= link_to "公開", (url_for controller: "admin/errors", action: "change_display", id: error.id) %>
+                        <td class="small-td">
+                            <ul>
+                                <li><%= link_to "編集", edit_admin_error_path(error.id) %></li>
+                                <li><%= link_to "削除", (url_for controller: "admin/errors", action: "pre_destroy", id: error.id) %></li>
+                            </ul>
                     <% end %>
                 </tr>
             <% end %>

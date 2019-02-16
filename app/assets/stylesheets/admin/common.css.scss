@@ -52,19 +52,63 @@
 }
 
 nav {
-    width: 60%;
+    width: 80%;
+    height: 80px;
     margin-left: auto;
     margin-right: auto;
+    ul {
+        margin-top: 0px;
+        height: 80px;
+        li {
+            float: left;
+            height: 80px;
+            margin-top: 0px;
+            padding-top: 20px;
+            width: 16%;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 23px;
+        }
+    }
 }
 #admin-main {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    background-color: #ffffff;
     #not-display {
         padding-top: 30px;
+        table {
+            width: 100%;
+            td {
+                width: 50%;
+                border: 1px solid #000000;
+                text-align: center;
+            }
+            td.small-td {
+                width: 25%;
+            }
+        }
     }
     #display {
         padding-top: 30px;
+        table {
+            width: 100%;
+            td {
+                width: 50%;
+                border: 1px solid #000000;
+                text-align: center;
+            }
+            td.small-td {
+                width: 25%;
+            }
+        }
     }
 }
 
+ul {
+    padding-left: 0px;
+}
