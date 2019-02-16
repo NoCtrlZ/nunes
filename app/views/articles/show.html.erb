@@ -6,6 +6,8 @@
             <div id="title">
                 <h1><%= @article.title %></h1>
             </div>
+            <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}&text=#{@article.title}", class: 'shareList__link icon-twitter', data: { show_count: false }, title: 'Twitter', target: '_blank' %>
+            <%= link_to 'Facebook', "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=#{@article.title}", class: 'shareList__link icon-twitter', data: { show_count: false }, title: 'Twitter', target: '_blank' %>
 
             <div id="intro">
                 <%= markdown(@article.intro) %>
