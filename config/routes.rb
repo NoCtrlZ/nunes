@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
 
   root 'static_pages#index'
-  resources :articles
-  resources :commands
+  resources :articles, except: [ :index, :new, :destroy, :edit, :update, :create]
   resources :contacts, except: [ :index, :show, :destroy, :edit, :update]
+  resources :news, except: [ :index, :new, :destroy, :edit, :update, :create]
+  resources :commands, except: [ :index, :new, :destroy, :edit, :update, :create]
+  resources :errors, except: [ :index, :new, :destroy, :edit, :update, :create]
+  resources :words, except: [ :index, :new, :destroy, :edit, :update, :create]
 
   namespace :admin do
 
@@ -22,7 +25,6 @@ Rails.application.routes.draw do
     get 'error/pre_destroy', to: 'errors#pre_destroy'
     get 'word/change_display', to: 'words#change_display'
     get 'word/pre_destroy', to: 'words#pre_destroy'
-
 
   end
 end
