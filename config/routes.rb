@@ -12,8 +12,10 @@ Rails.application.routes.draw do
     resources :contacts
     resources :news
     resources :commands
-    get 'change_display', to: 'articles#change_display'
-    get 'pre_destroy', to: 'articles#pre_destroy'
+    get 'article/change_display', to: 'articles#change_display'
+    get 'article/pre_destroy', to: 'articles#pre_destroy'
+    get 'command/change_display', to: 'commands#change_display'
+    get 'command/pre_destroy', to: 'commands#pre_destroy'
 
   end
 end
