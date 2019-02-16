@@ -21,20 +21,20 @@ class Admin::ErrorsController < ApplicationController
     def update
         @error = Error.find params[:id]
         @error.update_attributes error_params
-        redirect_to admin_root_path
+        redirect_to admin_errors_path
     end
 
     def create
         @error = Error.new(error_params)
         @error.save
-        redirect_to admin_root_path
+        redirect_to admin_errors_path
     end
 
     def change_display
         @error = Error.find params[:id]
         @error.is_display = !@error.is_display
         @error.save
-        redirect_to admin_root_path
+        redirect_to admin_errors_path
     end
 
     def pre_destroy
@@ -42,7 +42,7 @@ class Admin::ErrorsController < ApplicationController
         @error.is_destroy = true
         @error.is_display = false
         @error.save
-        redirect_to admin_root_path
+        redirect_to admin_errors_path
     end
 
 private

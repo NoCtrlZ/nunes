@@ -21,20 +21,20 @@ class Admin::CommandsController < ApplicationController
     def update
         @command = Command.find params[:id]
         @command.update_attributes command_params
-        redirect_to admin_root_path
+        redirect_to admin_commands_path
     end
 
     def create
         @command = Command.new(command_params)
         @command.save
-        redirect_to admin_root_path
+        redirect_to admin_commands_path
     end
 
     def change_display
         @command = Command.find params[:id]
         @command.is_display = !@command.is_display
         @command.save
-        redirect_to admin_root_path
+        redirect_to admin_commands_path
     end
 
     def pre_destroy
@@ -42,7 +42,7 @@ class Admin::CommandsController < ApplicationController
         @command.is_destroy = true
         @command.is_display = false
         @command.save
-        redirect_to admin_root_path
+        redirect_to admin_commands_path
     end
 
 private
