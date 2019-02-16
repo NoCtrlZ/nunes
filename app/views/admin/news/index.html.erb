@@ -1,9 +1,4 @@
-<ul>
-<li><%= link_to '記事管理', admin_root_path %></li>
-<li><%= link_to 'お問い合わせ管理', admin_contacts_path %></li>
-<li><%= link_to 'お知らせ管理', admin_news_index_path %>
-</ul>
-
+<div id="admin-main">
 <h2>News Manager</h2>
 <%= link_to 'お知らせを作成', new_admin_news_path %>
 <table>
@@ -19,3 +14,4 @@
 </tr>
 <% end %>
 </table>
+</div>

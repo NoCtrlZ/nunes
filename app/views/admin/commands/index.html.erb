@@ -20,6 +20,7 @@
                         <td><%= link_to "削除", (url_for controller: "admin/commands", action: "pre_destroy", id: command.id) %>
                     <% end %>
                 </tr>
+            <% end %>
         </table>
     </div>
 
@@ -31,6 +32,7 @@
                 <td>コマンド</td>
             </tr>
 
+            <% @commands.each do |command| %>
                 <tr>
                     <% next if command.is_destroy %>
                         <% if !command.is_display %>

@@ -1,8 +1,8 @@
-class CommandsController < ApplicationController
+class WordsController < ApplicationController
     before_action only: [:show, :index]
 
     def show
-        @command = Command.find params[:id]
+        @error = Error.find params[:id]
         @clearn = Article.where(is_display: true)
         @articles = @clearn.order(created_at: :desc).limit(5).offset(0)
         @contact = Contact.new
