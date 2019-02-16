@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
   resources :articles
+  resources :commands
   resources :contacts, except: [ :index, :show, :destroy, :edit, :update]
 
   namespace :admin do
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
     resources :articles
     resources :contacts
     resources :news
+    resources :comannds
     get 'change_display', to: 'articles#change_display'
     get 'pre_destroy', to: 'articles#pre_destroy'
 
