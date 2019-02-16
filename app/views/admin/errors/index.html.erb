@@ -1,0 +1,47 @@
+<div id="admin-main">
+    <h2>Error Manager</h2>
+    <%= link_to 'エラー記事を作成', new_admin_error_path %>
+
+    <div id="not-display">
+        <table>
+            <tr>
+                <td>記事タイトル</td>
+                <td>公開設定</td>
+                <td>コマンド</td>
+            </tr>
+
+            <% @errors.each do |error| %>
+                <tr>
+                    <% next if error.is_destroy %>
+                        <% if error.is_display %>
+                        <td><%= link_to error.title, admin_error_path(error.id) %></td>
+                        <td><%= link_to "非公開", (url_for controller: "admin/errors", action: "change_display", id: error.id) %>
+                        <td><%= link_to "編集", edit_admin_error_path(error.id) %></td>
+                        <td><%= link_to "削除", (url_for controller: "admin/errors", action: "pre_destroy", id: error.id) %>
+                    <% end %>
+                </tr>
+        </table>
+    </div>
+
+    <div id="display">
+        <table>
+            <tr>
+                <td>記事タイトル</td>
+                <td>公開設定</td>
+                <td>コマンド</td>
+            </tr>
+
+                <tr>
+                    <% next if error.is_destroy %>
+                        <% if !error.is_display %>
+                        <td><%= link_to error.title, admin_error_path(error.id) %></td>
+                        <td><%= link_to "公開", (url_for controller: "admin/errors", action: "change_display", id: error.id) %>
+                        <td><%= link_to "編集", edit_admin_error_path(error.id) %></td>
+                        <td><%= link_to "削除", (url_for controller: "admin/errors", action: "pre_destroy", id: error.id) %>
+                    <% end %>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+
+</div>

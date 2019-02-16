@@ -20,23 +20,24 @@
             </div>
 
         </div>
+
     </div>
 
     <div id="right">
         <div id="latest-contents">
-        <h3>最新の記事</h3>
-        <ul>
-            <% @post.each do |article| %>
-                    <li><%= link_to article.title, article_path(article.id) %></li>
-            <% end %>
-        </ul>
+            <h3>最新の記事</h3>
+            <ul>
+                <% @post.each do |article| %>
+                        <li><%= link_to article.title, article_path(article.id) %></li>
+                <% end %>
+            </ul>
         </div>
 
         <div id="news">
             <h3>お知らせ</h3>
             <div id="news-list">
                 <% @news.each do |news| %>
-                <p><span>(<%= l news.created_at, format: :news %>)</span><%= news.title %></p>
+                    <p><span>(<%= l news.created_at, format: :news %>)</span><%= news.title %></p>
                 <% end %>
             </div>
         </div>

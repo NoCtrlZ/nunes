@@ -1,56 +1,47 @@
-<nav>
-<ul>
-<li><%= link_to '記事管理', admin_root_path %></li>
-<li><%= link_to 'お問い合わせ管理', admin_contacts_path %></li>
-<li><%= link_to 'お知らせ管理', admin_news_index_path %>
-</ul>
-</nav>
-<div class="article-admin">
-<h2>Article Manager</h2>
-<%= link_to '記事を作成', new_admin_article_path %>
+<div id="admin-main">
+    <h2>Article Manager</h2>
+    <%= link_to '記事を作成', new_admin_article_path %>
 
-<div id="not-display-article">
-<table>
-<tr>
-<td>記事タイトル</td>
-<td>公開設定</td>
-<td>コマンド</td>
-</tr>
+    <div id="not-display">
+        <table>
+            <tr>
+                <td>記事タイトル</td>
+                <td>公開設定</td>
+                <td>コマンド</td>
+            </tr>
 
-<% @articles.each do |article| %>
-<tr>
-<% next if article.is_destroy %>
-<% if article.is_display %>
-<td><%= link_to article.title, admin_article_path(article.id) %></td>
-<td><%= link_to "非公開", (url_for controller: "admin/articles", action: "change_display", id: article.id) %>
-<td><%= link_to "編集", edit_admin_article_path(article.id) %></td>
-<td><%= link_to "削除", (url_for controller: "admin/articles", action: "pre_destroy", id: article.id) %>
-<% end %>
-</tr>
-<% end %>
-</table>
-</div>
+            <% @articles.each do |article| %>
+                <tr>
+                    <% next if article.is_destroy %>
+                        <% if article.is_display %>
+                        <td><%= link_to article.title, admin_article_path(article.id) %></td>
+                        <td><%= link_to "非公開", (url_for controller: "admin/articles", action: "change_display", id: article.id) %>
+                        <td><%= link_to "編集", edit_admin_article_path(article.id) %></td>
+                        <td><%= link_to "削除", (url_for controller: "admin/articles", action: "pre_destroy", id: article.id) %>
+                    <% end %>
+                </tr>
+        </table>
+    </div>
 
-<div id="display-article">
-<table>
-<tr>
-<td>記事タイトル</td>
-<td>公開設定</td>
-<td>コマンド</td>
-</tr>
+    <div id="display">
+        <table>
+            <tr>
+                <td>記事タイトル</td>
+                <td>公開設定</td>
+                <td>コマンド</td>
+            </tr>
 
-<% @articles.each do |article| %>
-<tr>
-<% next if article.is_destroy %>
-<% if !article.is_display %>
-<td><%= link_to article.title, admin_article_path(article.id) %></td>
-<td><%= link_to "公開", (url_for controller: "admin/articles", action: "change_display", id: article.id) %>
-<td><%= link_to "編集", edit_admin_article_path(article.id) %></td>
-<td><%= link_to "削除", (url_for controller: "admin/articles", action: "pre_destroy", id: article.id) %>
-<% end %>
-</tr>
-<% end %>
-</table>
-</div>
+                <tr>
+                    <% next if article.is_destroy %>
+                        <% if !article.is_display %>
+                        <td><%= link_to article.title, admin_article_path(article.id) %></td>
+                        <td><%= link_to "公開", (url_for controller: "admin/articles", action: "change_display", id: article.id) %>
+                        <td><%= link_to "編集", edit_admin_article_path(article.id) %></td>
+                        <td><%= link_to "削除", (url_for controller: "admin/articles", action: "pre_destroy", id: article.id) %>
+                    <% end %>
+                </tr>
+            <% end %>
+        </table>
+    </div>
 
 </div>

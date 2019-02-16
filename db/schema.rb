@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190210053351) do
+ActiveRecord::Schema.define(version: 20190216133518) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -25,12 +25,34 @@ ActiveRecord::Schema.define(version: 20190210053351) do
     t.string   "point",      limit: 255
   end
 
+  create_table "commands", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "point",      limit: 255
+    t.text     "text",       limit: 65535
+    t.string   "intro",      limit: 255
+    t.boolean  "is_destroy",               default: false, null: false
+    t.boolean  "is_display",               default: false, null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string   "nickname",   limit: 255
     t.string   "address",    limit: 255
     t.text     "text",       limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "errors", force: :cascade do |t|
+    t.string   "title",      limit: 255
+    t.string   "point",      limit: 255
+    t.text     "text",       limit: 65535
+    t.string   "intro",      limit: 255
+    t.boolean  "is_destroy",               default: false, null: false
+    t.boolean  "is_display",               default: false, null: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
   create_table "news", force: :cascade do |t|
