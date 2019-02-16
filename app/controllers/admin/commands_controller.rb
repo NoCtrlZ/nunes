@@ -2,6 +2,10 @@ class Admin::CommandsController < ApplicationController
     before_action :extract_command, only: [:show, :edit, :update, :destroy, :change_display]
     layout "admin"
 
+    def index
+        @commands = Command.all
+    end
+
     def new
         @command = Command.new
     end
