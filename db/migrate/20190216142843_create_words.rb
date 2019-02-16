@@ -3,6 +3,9 @@ class CreateWords < ActiveRecord::Migration
     create_table :words do |t|
       t.string :word
       t.text :meaning
+      t.boolean :is_destroy, default: false, null: false
+      t.boolean :is_display, default: false, null: false
+
 
       t.timestamps null: false
     end

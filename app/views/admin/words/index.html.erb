@@ -1,0 +1,47 @@
+<div id="admin-main">
+    <h2>Word Manager</h2>
+    <%= link_to 'エラー記事を作成', new_admin_word_path %>
+
+    <div id="not-display">
+        <table>
+            <tr>
+                <td>記事タイトル</td>
+                <td>公開設定</td>
+                <td>コマンド</td>
+            </tr>
+
+            <% @words.each do |word| %>
+                <tr>
+                    <% next if word.is_destroy %>
+                        <% if word.is_display %>
+                        <td><%= link_to word.title, admin_word_path(word.id) %></td>
+                        <td><%= link_to "非公開", (url_for controller: "admin/words", action: "change_display", id: word.id) %>
+                        <td><%= link_to "編集", edit_admin_word_path(word.id) %></td>
+                        <td><%= link_to "削除", (url_for controller: "admin/words", action: "pre_destroy", id: word.id) %>
+                    <% end %>
+                </tr>
+        </table>
+    </div>
+
+    <div id="display">
+        <table>
+            <tr>
+                <td>記事タイトル</td>
+                <td>公開設定</td>
+                <td>コマンド</td>
+            </tr>
+
+                <tr>
+                    <% next if word.is_destroy %>
+                        <% if !word.is_display %>
+                        <td><%= link_to word.title, admin_word_path(word.id) %></td>
+                        <td><%= link_to "公開", (url_for controller: "admin/words", action: "change_display", id: word.id) %>
+                        <td><%= link_to "編集", edit_admin_word_path(word.id) %></td>
+                        <td><%= link_to "削除", (url_for controller: "admin/words", action: "pre_destroy", id: word.id) %>
+                    <% end %>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+
+</div>
