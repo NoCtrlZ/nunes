@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  point: MyString
+  text: MyText
+  intro: MyString
+  is_destroy: false
+  is_display: false
+
+two:
+  title: MyString
+  point: MyString
+  text: MyText
+  intro: MyString
+  is_destroy: false
+  is_display: false
