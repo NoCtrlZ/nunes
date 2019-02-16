@@ -1,6 +1,6 @@
 @import 'rouge';
 
-#new-article {
+#new-page {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
@@ -18,23 +18,19 @@
             p {
                 margin-top: 15px;
             }
-            #article_title {
+            .title {
                 width: 80%;
                 height: 25px;
             }
-            #article_intro {
+            .small-input {
                 width: 80%;
                 height: 35px;
             }
-            #article_point {
-                width: 80%;
-                height: 35px;
-            }
-            #article_topic {
+            .middle-input {
                 width: 80%;
                 height: 50px;
             }
-            #article_text {
+            .big-input {
                 width: 80%;
                 height: 450px;
             }
