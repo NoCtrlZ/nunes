@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     resources :news
     resources :commands
     resources :errors
+    resources :words
     get 'article/change_display', to: 'articles#change_display'
     get 'article/pre_destroy', to: 'articles#pre_destroy'
     get 'command/change_display', to: 'commands#change_display'
