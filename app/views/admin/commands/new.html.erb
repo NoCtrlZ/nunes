@@ -1,0 +1,44 @@
+<div id="new-article">
+  <div id="editor">
+    <div id="admin-right">
+      <%= form_for [:admin, @command] do |f| %>
+        <p>タイトル</p>
+        <%= f.text_field :title %>
+
+        <p>導入文</p>
+        <%= f.text_area :intro %>
+
+        <p>要約</p>
+        <%= f.text_area :point %>
+
+        <p>本文</p>
+        <%= f.text_area :text, "v-model":"input" %>
+
+        <div class="submit">
+          <%= submit_tag "作成" %>
+        </div>
+      <% end %>
+    </div>
+
+
+    <div id="admin-left">
+      <p>プレビュー</p>
+      <div v-html="input | marked"></div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+window.onload = function() {
+new Vue({
+el: '#editor',
+data: {
+  input: '<%== j @command.text %>',
+},
+filters: {
+  marked: marked,
+},
+});
+};
+</script>
