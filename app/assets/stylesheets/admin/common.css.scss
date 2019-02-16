@@ -56,14 +56,15 @@ nav {
     margin-left: auto;
     margin-right: auto;
 }
-.article-admin {
+.admin-main {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    #not-display {
+        padding-top: 30px;
+    }
+    #display {
+        padding-top: 30px;
+    }
 }
-#not-display-article {
-    padding-top: 30px;
-}
-#display-article {
-    padding-top: 30px;
-}
+
