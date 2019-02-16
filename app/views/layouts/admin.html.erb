@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>TechDeeperのAdmin</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.10/vue.js"></script>
@@ -9,7 +10,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <meta name="robots" content="noindex,nofollow">
 </head>
+
 <body>
+
+<header>
+    <nav>
+        <ul>
+            <li><%= link_to '記事管理', admin_root_path %></li>
+            <li><%= link_to 'お問い合わせ管理', admin_contacts_path %></li>
+            <li><%= link_to 'お知らせ管理', admin_news_index_path %></li>
+            <li><%= link_to 'コマンド管理', admin_commands_path %></li>
+        </ul>
+    </nav>
+</header>
 
 <%= yield %>
 
