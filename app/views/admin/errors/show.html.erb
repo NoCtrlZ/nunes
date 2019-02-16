@@ -1,0 +1,20 @@
+<% set_meta_tags title: @error.title, description: @error.point, og: { title: @error.title, type: 'error', image: image_url('icon.jpg') } %>
+<div id="main">
+    <div id="left">
+        <div id="container">
+
+            <div id="title">
+                <h1><%= @error.title %></h1>
+            </div>
+
+            <div id="intro">
+                <%= markdown(@error.intro) %>
+            </div>
+
+            <div id="content">
+                <%= sanitize markdown(@error.text) %>
+            </div>
+
+        </div>
+    </div>
+</div>
