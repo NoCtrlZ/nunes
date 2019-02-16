@@ -11,7 +11,7 @@ class Admin::ErrorsController < ApplicationController
     end
 
     def show
-        @commnad = Error.find params[:id]
+        @error = Error.find params[:id]
     end
 
     def edit
