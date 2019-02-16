@@ -8,6 +8,8 @@
             </div>
             <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}&text=#{@article.title}", class: 'shareList__link icon-twitter', data: { show_count: false }, title: 'Twitter', target: '_blank' %>
             <%= link_to 'Facebook', "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=#{@article.title}", class: 'shareList__link icon-twitter', data: { show_count: false }, title: 'Twitter', target: '_blank' %>
+            <%= link_to 'LINE', "http://line.me/R/msg/text/?#{request.url}&text=#{@article.title}", class: 'shareList__link icon-twitter', data: { show_count: false }, title: 'Twitter', target: '_blank' %>
+            <%= link_to 'Slack', "http://slackbutton.herokuapp.com/post/new/?url=#{request.url}&text=#{@article.title}", class: 'shareList__link icon-twitter', data: { show_count: false }, title: 'Twitter', target: '_blank' %>
 
             <div id="intro">
                 <%= markdown(@article.intro) %>
