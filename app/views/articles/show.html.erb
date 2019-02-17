@@ -8,10 +8,9 @@
                 <h1><%= @article.title %></h1>
             </div>
             <div id="sosyal">
-            <%= link_to 'Twitter', "https://twitter.com/share?url=#{request.url}&text=#{@article.title}", class: 'twitter', title: 'Twitter', target: '_blank' %>
-            <%= link_to 'Facebook', "https://www.facebook.com/sharer/sharer.php?u=#{request.url}&text=#{@article.title}", class: 'facebook', title: 'Facebook', target: '_blank' %>
-            <%= link_to 'LINE', "http://line.me/R/msg/text/?#{request.url}&text=#{@article.title}", class: 'line', title: 'LINE', target: '_blank' %>
-            <%= link_to 'Slack', "http://slackbutton.herokuapp.com/post/new/?url=#{request.url}&text=#{@article.title}", class: 'slack', title: 'Slack', target: '_blank' %>
+                <% socail_media.each do |sns, name, link| %>
+                    <%= link_to sns, link, class: name, title: sns, target: '_blank' %>
+                <% end %>
             </div>
 
             <div id="intro">
