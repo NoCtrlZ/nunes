@@ -46,7 +46,7 @@ private
       params.require(:article).permit(
         :title,
         :intro,
-        :ket,
+        :key,
         :topic,
         :text,
         :point,
