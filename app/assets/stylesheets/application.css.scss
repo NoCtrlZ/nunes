@@ -23,7 +23,7 @@ $pc: 1440px;
 body {
 	margin: 0px;
 	background-color: #e8e6e6;
-
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN';
 	header {
 	    margin-top: 0px;
 	    height: 80px;
@@ -255,9 +255,12 @@ body {
 						@include sm() {
 							font-size: 20px;
 						}
-			    	}
+					}
+					span {
+						font-size: 15px;
+					}
 			    	p {
-			    		color: #696161;
+						color: #696161;
 			    		@include mb() {
 			    			font-size: 20px;
 			    		}
@@ -267,7 +270,7 @@ body {
 			    	}
 			    	a {
 			    		text-decoration: none;
-			    		color: #1693a2;
+						color: #1693a2;
 			    	}
 				}
 
@@ -311,7 +314,7 @@ body {
 			    		margin-top: 0px;
 			    		margin-left: 20%;
 			    		margin-right: 20%;
-			    		border-bottom: 2px solid #b1acac;
+						border-bottom: 2px solid #b1acac;
 			    		@include sm() {
 			    			font-size: 27px;
 			    		}
