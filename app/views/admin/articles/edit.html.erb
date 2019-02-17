@@ -3,7 +3,7 @@
     <div id="admin-right">
       <%= form_for [:admin, @article] do |f| %>
         <p>タイトル</p>
-        <%= f.text_field :title, class: 'title' %>
+        <%= f.text_field :title, class: 'smaller-input' %>
 
         <p>カテゴリ</p>
         <% article_category.each do |category| %>
@@ -12,6 +12,9 @@
             <%= category %>
           </label>
         <% end %>
+
+        <p>キー</p>
+        <%= f.text_field :key, class: 'smaller-input' %>
 
         <p>導入文</p>
         <%= f.text_area :intro, class: 'small-input' %>
