@@ -5,6 +5,14 @@
         <p>タイトル</p>
         <%= f.text_field :title, class: 'title' %>
 
+        <p>カテゴリ</p>
+        <% article_category.each do |category| %>
+          <label>
+            <%= f.check_box  :category, {multiple: true}, category, nil %>
+            <%= category %>
+          </label>
+        <% end %>
+
         <p>導入文</p>
         <%= f.text_area :intro, class: 'small-input' %>
 

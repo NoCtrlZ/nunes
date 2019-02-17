@@ -49,7 +49,8 @@ private
         :topic,
         :text,
         :point,
-        :is_display)
+        :is_display,
+        category: [])
     end
 
     def extract_article
