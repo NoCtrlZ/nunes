@@ -11,6 +11,7 @@
             <div id="article-area">
                 <% @articles.each do |article| %>
                         <h2><%= link_to article.title, article_path(article.id) %></h2>
+                        <span><%= l article.created_at, format: :short %></span>
                         <p><%= article.point.truncate(124, separator: ' ') %></p>
                 <% end %>
             </div>
