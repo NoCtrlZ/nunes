@@ -7,9 +7,10 @@
                 <span><img src="date.png"><%= l @article.created_at, format: :short %></span>
                 <h1><%= @article.title %></h1>
             </div>
-            <div id="sosyal">
+
+            <div id="social">
                 <% socail_media.each do |sns, name, link| %>
-                    <%= link_to sns, link, class: name, title: sns, target: '_blank' %>
+                    <%= link_to sns, link, class: "#{name} sns", title: sns, target: '_blank' %>
                 <% end %>
             </div>
 
