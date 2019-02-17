@@ -22,12 +22,13 @@ $pc: 1440px;
 
 body {
 	margin: 0px;
-	background-color: #e8e6e6;
-
+	background-color: #f1f1f1;
+    font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN';
 	header {
 	    margin-top: 0px;
 	    height: 80px;
 	    background-color: #f6f6f6;
+	    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 	    @include sm() {
 	    	height: 60px;
 	    }
@@ -58,6 +59,7 @@ body {
         margin-left: 10%;
 		margin-right: 10%;
 		overflow: hidden;
+		padding: 5px;
 		@include mb() {
 			margin-left: 3%;
 			margin-right: 3%;
@@ -71,6 +73,7 @@ body {
 	        width: 70%;
 	        padding: 20px;
 			float: left;
+			box-shadow: 0px 0px 3px gray;
 			@include mb() {
 				width: 100%;
 				float: unset;
@@ -84,18 +87,28 @@ body {
 					padding-top: 30px;
 				}
   	            #title {
-				      width: 100%;
-				      height: 100px;
+				    width: 100%;
+				    height: 100px;
+				    img {
+				    	width: 15px;
+				    	padding-left: 2%;
+				    	padding-right: 1%;
+				    }
   		            h1 {
 	                    font-size: 34px;
-	                    padding-top: 7px;
+	                    padding-top: 30px;
 	                    float: left;
+	                    border-bottom: 3px dotted #21c1ac;
 					    margin: 0px;
-					    width: 100%;
+					    margin-right: 5%;
+					    margin-left: 5%;
+					    width: 90%;
+					    padding-bottom: 10px;
 					    text-align: center;
+					    color: #505050;
 					    @include sm() {
-							font-size: 27px;
-						}
+					        font-size: 27px;
+				        }
                     }
                 }
 
@@ -133,6 +146,7 @@ body {
 	                h2 {
 	    				text-align: center;
 	    				font-size: 20px;
+	    				color: #505050;
 	    			}
 	    			ul {
 	    				padding-left: 20px;
@@ -171,6 +185,7 @@ body {
 	    				margin-top: 50px;
 	    				margin-bottom: 50px;
 	    				border-left: 5px solid #0fd4e8;
+	    				color: #505050;
 	    				@include sm() {
 							font-size: 25px;
 							padding-top: 5px;
@@ -249,15 +264,19 @@ body {
 					margin-right: auto;
 			    	h2 {
 						padding-top: 50px;
+						color: #505050;
 						@include mb() {
 							font-size: 30px;
 						}
 						@include sm() {
 							font-size: 20px;
 						}
-			    	}
+					}
+					span {
+						font-size: 15px;
+					}
 			    	p {
-			    		color: #696161;
+						color: #696161;
 			    		@include mb() {
 			    			font-size: 20px;
 			    		}
@@ -267,7 +286,7 @@ body {
 			    	}
 			    	a {
 			    		text-decoration: none;
-			    		color: #1693a2;
+						color: #1693a2;
 			    	}
 				}
 
@@ -307,11 +326,11 @@ body {
 			    	h1 {
 			    		text-align: center;
 			    		font-size: 35px;
-			    		color: #695555;
+			    		color: #505050;
 			    		margin-top: 0px;
 			    		margin-left: 20%;
 			    		margin-right: 20%;
-			    		border-bottom: 2px solid #b1acac;
+						border-bottom: 2px dotted #b1acac;
 			    		@include sm() {
 			    			font-size: 27px;
 			    		}
@@ -328,6 +347,7 @@ body {
 			}
 	        #article-topic {
 				background-color: #ffffff;
+				box-shadow: 0px 0px 3px gray;
 				@include mb() {
 					display: none;
 				}
@@ -345,6 +365,7 @@ body {
 				}
 	        	h3 {
 					text-align: center;
+					color: #505050;
 					margin-top: 0px;
 					padding-top: 10px;
 					margin-left: 40px;
@@ -354,8 +375,10 @@ body {
 			}
 			#news {
 				background-color: #ffffff;
+				box-shadow: 0px 0px 3px gray;
             	h3 {
 					text-align: center;
+					color: #505050;
 					margin-top: 0px;
 					padding-top: 10px;
 					margin-left: 30px;
@@ -375,8 +398,10 @@ body {
 			}
             #latest-contents {
 				background-color: #ffffff;
+				box-shadow: 0px 0px 3px gray;
             	h3 {
 					text-align: center;
+					color: #505050;
 					margin-top: 0px;
 					padding-top: 10px;
 					margin-left: 30px;
@@ -415,8 +440,10 @@ body {
 			}
 			#contact {
 				background-color: #ffffff;
+				box-shadow: 0px 0px 3px gray;
 				h3 {
 					text-align: center;
+					color: #505050;
 					padding: 10px;
 					margin-left: 30px;
 					margin-right: 30px;
