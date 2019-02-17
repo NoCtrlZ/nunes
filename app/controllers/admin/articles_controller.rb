@@ -47,6 +47,7 @@ private
         :title,
         :intro,
         :topic,
+        :key,
         :text,
         :point,
         :is_display,
