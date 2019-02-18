@@ -11,12 +11,7 @@ Rails.application.routes.draw do
   namespace :admin do
 
     root 'admin#index'
-    resources :articles
-    resources :contacts
-    resources :news
-    resources :commands
-    resources :errors
-    resources :words
+    resources :articles, :contacts, :news, :commands, :errors, :words
     get 'article/change_display', to: 'articles#change_display'
     get 'article/pre_destroy', to: 'articles#pre_destroy'
     get 'command/change_display', to: 'commands#change_display'
